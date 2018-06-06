@@ -64,7 +64,3 @@ for file in files:
         plt.axis('off')
         plt.savefig(os.path.join(save_path, group,
                                  "Trial_{}_{}.png".format(trial, arena)))
-        # plt.show()
-
-
-
