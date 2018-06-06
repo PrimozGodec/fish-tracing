@@ -49,6 +49,9 @@ for file in files:
         group = sheet.cell(31, 1).value
         trial = sheet.cell(4, 1).value
 
+        if group == "":
+            group = "unclassified"
+
         if not os.path.isdir(os.path.join(save_path, group)):
             os.makedirs(os.path.join(save_path, group))
 
