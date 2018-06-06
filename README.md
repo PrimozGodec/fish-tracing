@@ -1,7 +1,10 @@
 # Fish tracing
+
 Scripts fro plotting fish traces
 
 ## Instalation
+
+This step need to be done only first time using this script on the machine.
 
 1. Open the `Terminal` app
 
@@ -26,7 +29,10 @@ Scripts fro plotting fish traces
    Go to https://www.python.org/downloads/ and download and install the latest 
    version of `Python`.
    
-3. Install `virtualenv`:
+3. If Terminal (MacOS or Linux) or Command prompt (Windows) is not open yet
+   open it:<br>
+   
+4. Install `virtualenv`:
 
        sudo pip install virtualenv
        
@@ -39,14 +45,48 @@ Scripts fro plotting fish traces
    
    `~/venv/fish_tracing` can be replaced with a custom path.
    
-4. Activate the virtual environment:
+5. Activate the virtual environment:
 
        source ~/venv/fish_tracing/bin/activate
        
-5. Move to the package directory:
+6. Move to the package directory:
 
        cd <path>
        
-6. Install requirements
+7. Install requirements
 
        pip install -r requirements.txt
+       
+## Usage
+
+1. Mac or Linux: open the terminal app. <br>
+   Windows: open the command prompt.
+
+2. Activate the virtual environment:
+
+       source ~/venv/fish_tracing/bin/activate
+       
+3. Move to the package directory:
+
+       cd <path>
+       
+4. Copy excel files with traces to the package subdirectory (<source dir>).
+
+5. Run the tracing script:
+
+       python trace_fish.py --source <source dir> --destination <destination dir>
+       
+   `<source dir>` is the path to the directory with the excel files. <br>
+   `<destination dir>` is the path to the directory where results files will be saved
+   
+   There are two additional arguments that can be used when default settings
+   are sufficient.
+   
+   `--start` defines the second when we start to plot traces (default 10).
+   E.g. value 10 means that we start to plot traces 10 seconds after the start
+   of the recording <br>
+   `--end` defines the second when we end to plot traces (default 600).
+   E.g. value 600 means that we end to plot traces 600 seconds (10 minutes) 
+   after the start of the recording.
+   
+6. Results are now available at `<destination dir>`.    
