@@ -10,7 +10,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('-s', '--source', type=str, required=True)
 parser.add_argument('-d', '--destination', type=str, required=True)
-parser.add_argument('-so', '--start', type=float, default=10)
+parser.add_argument('-st', '--start', type=float, default=10)
 parser.add_argument('-e', '--end', type=float, default=600)
 
 args = parser.parse_args()
