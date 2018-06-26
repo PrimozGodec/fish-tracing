@@ -59,22 +59,30 @@ This step need to be done only first time using this script on the machine.
        
 ## Usage
 
-1. Mac or Linux: open the terminal app. <br>
+1. Mac or Linux: open the Terminal app:  cmd+space, then type Terminal<br>
    Windows: open the command prompt.
 
 2. Activate the virtual environment:
 
-       source ~/venv/fish_tracing/bin/activate
-       
+       source ~/venv/fish_tracking/bin/activate
+
 3. Move to the package directory:
 
        cd <path>
+
+e.g.
+
+       cd Downloads/Tracking\ Instructions\ and\ Script/fish-tracking
        
-4. Copy excel files with traces to the package subdirectory (<source dir>).
+4. Copy excel files with traces to the package subdirectory (`<source dir>`).
 
 5. Run the tracing script:
 
        python trace_fish.py --source <source dir> --destination <destination dir>
+
+   e.g.
+
+       python trace_fish.py --source 3-08-15\ Nicotine\ Experiment/Export\ Files/ --destination 3-08-15\ Nicotine\ Experiment/Orange_Generated_Tracings
        
    `<source dir>` is the path to the directory with the excel files. <br>
    `<destination dir>` is the path to the directory where results files will be saved
