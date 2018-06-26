@@ -70,7 +70,7 @@ This step need to be done only first time using this script on the machine.
 
        cd <path>
 
-e.g.
+   e.g.
 
        cd Downloads/Tracking\ Instructions\ and\ Script/fish-tracking
        
