@@ -72,7 +72,7 @@ This step need to be done only first time using this script on the machine.
 
    e.g.
 
-       cd Downloads/Tracking\ Instructions\ and\ Script/fish-tracking
+       cd fish-tracking
 
 5. Run the tracing script:
 
