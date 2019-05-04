@@ -80,7 +80,7 @@ This step need to be done only first time using this script on the machine.
 
    e.g.
 
-       python trace_fish.py --source "data/input/12 Areana Trial 1.xlsx"
+       python trace_fish_new.py --source "data/input/12 Areana Trial 1.xlsx"
 
    `<source dir>` is the path to the directory with the excel files. <br>
 
