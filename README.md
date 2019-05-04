@@ -59,6 +59,45 @@ This step need to be done only first time using this script on the machine.
        
 ## Usage
 
+1. Mac or Linux: open the Terminal app. At MacOS: cmd+space, then type Terminal<br>
+   Windows: open the command prompt.
+
+2. Activate the virtual environment:
+
+       source ~/venv/fish_tracking/bin/activate
+
+3. Move to the package directory:
+
+       cd <path>
+
+   e.g.
+
+       cd Downloads/Tracking\ Instructions\ and\ Script/fish-tracking
+
+5. Run the tracing script:
+
+       python trace_fish_new.py --source <source dir>
+
+   e.g.
+
+       python trace_fish.py --source "data/input/12 Areana Trial 1.xlsx"
+
+   `<source dir>` is the path to the directory with the excel files. <br>
+
+   There are two additional arguments that can be used.
+
+   `--start` defines the second when we start to plot traces (default 0).
+   E.g. value 0 means that we start to plot traces 0 seconds after the start
+   of the recording <br>
+   `--end` defines the second when we end to plot traces (default 1000).
+   E.g. value 10000 means that we end to plot traces 10000 seconds
+   after the start of the recording.
+
+6. Results are now available in `data/output` directory.
+
+
+## Usage of old script `trace_fish.py`
+
 1. Mac or Linux: open the Terminal app:  cmd+space, then type Terminal<br>
    Windows: open the command prompt.
 
