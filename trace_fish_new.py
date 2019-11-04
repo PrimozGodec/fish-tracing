@@ -30,12 +30,20 @@ for ch in exp_data.keys():
     print(ch)
 
     positions = exp_data[ch]
-    postions = positions[(positions["Time1"] <= args.end) &
+
+    if not ("Time1" in positions and "X" in positions):
+        print("Skipping {}. Seems to be empty.".format(ch))
+        continue
+
+    positions = positions[(positions["Time1"] <= args.end) &
                          (positions["Time1"] > args.start)]
 
     # when track to short
     if len(positions) == 0 or positions["Time1"].iloc[-1] < args.end:
         print("Warning: {} shorter than {} seconds.".format(ch, args.end))
+
+    # remove positions with unknown values (-)
+    positions = positions[(positions["X"] != "-") & (positions["X"] != "-")]
 
     plt.clf()
 
